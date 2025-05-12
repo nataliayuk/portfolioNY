@@ -1,0 +1,94 @@
+/* container geral da Home */
+.about-container {
+    /* herda padding top/bottom do .page-container do App.css */
+    width: 100%;
+  }
+  
+  /* === Hero === */
+  .about {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-base); /* 47px */
+  }
+
+  .about-2 {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-base); /* 47px */
+  }
+  
+  .about-text {
+    text-align: left;
+    line-height: var(--line-height-base); /* 22px */
+  }
+
+  .about-text-2 {
+    text-align: right;
+    line-height: var(--line-height-base); /* 22px */
+  }
+
+  /* Elementos de texto */
+  .about-text h1 {
+    margin: 0;
+    display: flex;
+    align-items: baseline;
+    padding: 32px 0 32px 0;
+  }
+
+  .about-text-2 h1 {
+    margin: 0;
+    align-items: baseline;
+    padding: 32px 0 32px 0;
+  }
+
+  .about-initial {
+    font-family: 'MonteCarlo', cursive;
+    font-size: 80px;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-right: 4px;
+  }
+  
+  .about-title {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 38px;
+    font-weight: 400;
+    color: var(--color-text);
+    letter-spacing: 0.02em; 
+  }
+  
+  /* Parágrafo descritivo */
+  .about-text {
+    margin: 0;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--color-text);
+    letter-spacing: 0.1em;      /* 10% de letter-spacing */
+    padding: 0px 0 64px 0;
+  }
+
+  .about-text-2 {
+    margin: 0;
+    font-family: var(--font-family-base);
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--color-text);
+    letter-spacing: 0.1em;      /* 10% de letter-spacing */
+    padding: 0px 0 64px 0;
+  }
+  
+  /* Responsividade: empilha em telas <=768px */
+  @media (max-width: 768px) {
+    .about {
+      flex-direction: column-reverse;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .about-text {
+      flex: none;
+      width: 100%;
+    }
+}

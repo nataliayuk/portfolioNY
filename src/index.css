@@ -1,4 +1,9 @@
-:root {
+/*
+  * É importado uma única vez no main e vale para toda a aplicação
+  * O CSS é o mesmo para todos os componentes
+*/
+
+/*:root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +70,79 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}*/
+
+:root {
+  /* cores */
+  --color-bg: #312E2E;
+  --color-text: #F5F5F5;
+  --color-accent: #A69A8C;
+
+  /* tipografia */
+  --font-family-base: 'Inter', sans-serif;
+  --font-weight-light: 300;      
+  --line-height-base: 22px;
+
+  /* espaçamento base entre seções/components */
+  --spacing-base: 47px;          
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-weight: var(--font-weight-light);
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.navbar,
+.footer {
+  flex: 0 0 auto;;
+}
+
+.page-container {
+  flex: 1 0 auto;
+}
+
+/* Tipografia global */
+h1 {
+  font-size: 32px;
+  color: var(--color-text);
+}
+h2 {
+  font-size: 20px;
+  color: var(--color-text);
+}
+h3 {
+  font-size: 18px;
+  color: var(--color-text);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.8;
 }

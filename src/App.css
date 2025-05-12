@@ -1,4 +1,9 @@
-#root {
+/*
+  * É importado dentro do App (componente principal)
+  * O CSS é específico para o componente
+*/
+
+/*#root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +44,23 @@
 
 .read-the-docs {
   color: #888;
+}*/
+
+ /* container interno */
+.page-container {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1012px;      
+  margin: 0 auto;
+  padding: 130px 0;          
 }
+/* utilitários */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mt-base { margin-top: var(--spacing-base); }
+.mb-base { margin-bottom: var(--spacing-base); }

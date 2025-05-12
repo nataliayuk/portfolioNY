@@ -1,0 +1,27 @@
+.navbar {
+    height: 60px;
+    background-color: #1E1D1D;
+    display: flex;
+    justify-content: center;    /* itens centralizados horizontalmente */
+    align-items: center;        /* centralizados verticalmente */
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 80px;                  /* espaçamento horizontal entre links */
+  }
+  
+  .navbar-nav a {
+    font-family: var(--font-family-base);
+    font-weight: 500;           /* Inter Medium */
+    font-size: 18px;
+    line-height: 10px;
+    color: #E0D7CC;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .navbar-nav a:hover,
+  .navbar-nav a.active {
+    color: var(--color-accent);
+  }

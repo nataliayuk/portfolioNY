@@ -1,11 +1,17 @@
-import { useState } from 'react'
+/*import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '/vite.svg'*/
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Navbar } from './components/Navbar'
+import { Footer } from './components/Footer'  
+import Home from './pages/Home'
+import About from './pages/About'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState<number>(0) //useState is a React hook that allows you to add state to functional components
-  //useState takes an initial state as an argument and returns an array with two elements: the current state and a function to update it
+  /*const [count, setCount] = useState<number>(0) 
 
   return (
     <>
@@ -16,7 +22,7 @@ function App() {
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-      </div>
+    </div>
       <h1>Vite + React</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
@@ -30,6 +36,21 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+  )*/
+
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <div className="page-container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<h1></h1>} />
+         <Route path="/contact" element={<Contact />} />
+       </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
